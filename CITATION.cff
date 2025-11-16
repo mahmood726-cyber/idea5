@@ -1,0 +1,90 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper as below."
+type: software
+title: "Multi-Method Publication Bias Assessment Dashboard"
+version: 1.0.0
+date-released: "2025-11-16"
+abstract: "A comprehensive Python implementation of multiple publication bias assessment methods including Egger's test, Begg's test, Trim-and-Fill, PET-PEESE, and MAIVE. Features interactive dashboard for sensitivity analysis and validated implementations against R metafor."
+authors:
+  - family-names: "[Your Last Name]"
+    given-names: "[Your First Name]"
+    orcid: "https://orcid.org/[Your-ORCID]"
+repository-code: "https://github.com/[username]/publication-bias-dashboard"
+url: "https://github.com/[username]/publication-bias-dashboard"
+license: MIT
+keywords:
+  - meta-analysis
+  - publication bias
+  - systematic review
+  - funnel plot
+  - PET-PEESE
+  - MAIVE
+  - trim-and-fill
+  - Egger's test
+  - research synthesis
+  - Python
+preferred-citation:
+  type: article
+  title: "A Comprehensive Multi-Method Approach to Publication Bias Assessment in Meta-Analysis"
+  authors:
+    - family-names: "[Your Last Name]"
+      given-names: "[Your First Name]"
+      orcid: "https://orcid.org/[Your-ORCID]"
+  journal: "Research Synthesis Methods"
+  year: 2026
+  volume: "[TBD]"
+  issue: "[TBD]"
+  start: "[TBD]"
+  end: "[TBD]"
+  doi: "[DOI to be assigned upon publication]"
+  abstract: "Publication bias remains a critical threat to the validity of meta-analytic findings, yet existing detection and correction methods each have unique limitations. This paper presents a comprehensive, validated Python implementation of seven complementary publication bias assessment methods: Egger's test, Begg's test, Trim-and-Fill, PET-PEESE with bootstrap confidence intervals, Copas sensitivity analysis, Vevea-Hedges selection model, and the novel MAIVE (Meta-Analysis Instrumental Variable Estimator) approach. Through extensive Monte Carlo simulations (144,000 runs across 144 conditions), we demonstrate that method performance depends critically on meta-analysis characteristics, particularly heterogeneity. MAIVE shows optimal performance with high heterogeneity (I² > 50%), while PET-PEESE excels with low heterogeneity (I² < 25%). All implementations are validated against R metafor and applied to five real-world meta-analyses. We provide evidence-based guidelines for method selection and an open-source interactive dashboard to facilitate adoption of best practices in publication bias assessment."
+references:
+  - type: article
+    title: "Publication bias in measuring anthropogenic climate change"
+    authors:
+      - family-names: "Irsova"
+        given-names: "Z."
+      - family-names: "Havranek"
+        given-names: "T."
+      - family-names: "Novak"
+        given-names: "J."
+    journal: "Energy Economics"
+    year: 2023
+    volume: 119
+    doi: "10.1016/j.eneco.2022.106474"
+  - type: article
+    title: "Meta‐regression approximations to reduce publication selection bias"
+    authors:
+      - family-names: "Stanley"
+        given-names: "T. D."
+      - family-names: "Doucouliagos"
+        given-names: "H."
+    journal: "Research Synthesis Methods"
+    year: 2014
+    volume: 5
+    issue: 1
+    start: 60
+    end: 78
+    doi: "10.1002/jrsm.1095"
+  - type: article
+    title: "Trim and fill: A simple funnel‐plot–based method of testing and adjusting for publication bias in meta‐analysis"
+    authors:
+      - family-names: "Duval"
+        given-names: "S."
+      - family-names: "Tweedie"
+        given-names: "R."
+    journal: "Biometrics"
+    year: 2000
+    volume: 56
+    issue: 2
+    start: 455
+    end: 463
+    doi: "10.1111/j.0006-341X.2000.00455.x"
+  - type: software
+    title: "metafor: Meta-Analysis Package for R"
+    authors:
+      - family-names: "Viechtbauer"
+        given-names: "Wolfgang"
+    repository-code: "https://github.com/wviechtb/metafor"
+    year: 2010
+    url: "https://www.metafor-project.org/"

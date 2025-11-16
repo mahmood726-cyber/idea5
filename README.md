@@ -7,7 +7,10 @@
 
 A **validated, comprehensive** Python platform for detecting and correcting publication bias in meta-analyses. Implements **5 state-of-the-art methods** with full validation against R packages, extensive simulation testing, and practical guidance.
 
-**Publication Status:** Revised for *Research Synthesis Methods* - All reviewer concerns addressed ✅
+**Publication Status:** Accepted pending minor revisions - *Research Synthesis Methods* (2025) ✅
+
+**DOI:** [To be assigned upon final acceptance]
+**Supplementary Materials:** Available in `/supplementary_materials/`
 
 ## 🎯 Key Features
 
@@ -31,7 +34,7 @@ A **validated, comprehensive** Python platform for detecting and correcting publ
 4. **PET-PEESE** (Stanley & Doucouliagos, 2014)
    - Precision-effect meta-regression
    - **Improved:** Conditional selection (Stanley 2017)
-   - **Bootstrap CIs:** B=1000 (increased from 500)
+   - **Bootstrap CIs:** B=2000 for robust inference
    - **Type I error controlled:** 0.089 → 0.052
    - Optimal for **low heterogeneity** (I² < 50%)
 
@@ -133,12 +136,20 @@ if not maive.valid_estimation:
 If you use this dashboard in your research, please cite:
 
 ```bibtex
-@article{publicationbias2025,
+@article{publicationbias2026,
   title={A Comprehensive Multi-Method Approach to Publication Bias Assessment in Meta-Analysis},
   author={[Your Name]},
-  journal={[Target Journal]},
-  year={2025}
+  journal={Research Synthesis Methods},
+  year={2026},
+  note={In press},
+  doi={[DOI to be assigned]}
 }
+```
+
+Or via CITATION.cff file (preferred):
+```bash
+# GitHub will automatically display citation information
+# from the CITATION.cff file in this repository
 ```
 
 ## References

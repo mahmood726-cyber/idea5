@@ -283,7 +283,7 @@ def pet_peese_combined(
     standard_errors: np.ndarray,
     alpha: float = 0.05,
     bootstrap: bool = True,
-    n_bootstrap: int = 1000,
+    n_bootstrap: int = 2000,
     random_seed: Optional[int] = None
 ) -> PETPEESEResult:
     """
