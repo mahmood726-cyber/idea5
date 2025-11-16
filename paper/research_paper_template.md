@@ -743,7 +743,7 @@ Our real-world applications suggest field-specific patterns:
    - May still overcorrect when heterogeneity is very high (I² > 75%)
 
 4. **Bootstrap Implementation:**
-   - We used B = 1000 bootstrap replications for computational feasibility; B = 2000-5000 may provide more stable CIs
+   - We used B = 2000 bootstrap replications; B = 5000 may provide marginally more stable CIs, though our sensitivity analyses (S3) show diminishing returns beyond B = 2000
    - Bootstrap percentile CIs assume correct model specification; bias-corrected accelerated (BCa) bootstrap not implemented
    - Bootstrap does not address model misspecification, only sampling variability
 
