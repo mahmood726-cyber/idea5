@@ -582,7 +582,7 @@ Based on our comprehensive simulation study and real-world applications, we prov
 
 **Medium Meta-Analyses (k = 20-50):**
 - **Low heterogeneity (I² < 25%):**
-  - **First choice:** PET-PEESE with bootstrap CIs (B ≥ 1000)
+  - **First choice:** PET-PEESE with bootstrap CIs (B ≥ 2000)
   - **Secondary:** Trim-and-fill (visual/exploratory)
   - **Detection:** Egger's test ✓ (good performance)
 
