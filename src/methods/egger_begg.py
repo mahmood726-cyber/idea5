@@ -78,14 +78,26 @@ def egger_test(
     Returns:
         EggerTestResult object with test statistics and interpretation
     """
+    # Input contract: fail loudly on degenerate or non-finite designs.
+    effects = np.asarray(effect_sizes, dtype=float)
+    ses = np.asarray(standard_errors, dtype=float)
+    if effects.ndim != 1 or ses.shape != effects.shape or len(effects) < 3:
+        raise ValueError("Need matching one-dimensional arrays with at least 3 studies")
+    if not np.all(np.isfinite(effects)) or not np.all(np.isfinite(ses)) or np.any(ses <= 0):
+        raise ValueError("Effects must be finite and standard errors finite and positive")
+    if not np.isfinite(alpha) or not 0 < alpha < 1:
+        raise ValueError("alpha must lie strictly between 0 and 1")
+    effect_sizes, standard_errors = effects, ses
     # Calculate precision and standardized effect
     precision = 1 / standard_errors
     standardized_effect = effect_sizes / standard_errors
 
-    # Weighted least squares regression
-    # Model: standardized_effect = intercept + slope * precision
-    # Weights: 1/variance of standardized effect = precision^2
-    weights = precision
+    # Egger SND-on-precision ordinary least squares: under the defining
+    # independent Gaussian sampling model, SND has unit sampling variance.
+    weights = np.ones_like(precision)
+
+    if np.ptp(precision) <= np.finfo(float).eps * np.max(np.abs(precision)):
+        raise ValueError("Study precision must vary to estimate funnel asymmetry")
 
     # Design matrix
     X = np.column_stack([np.ones_like(precision), precision])
@@ -115,7 +127,7 @@ def egger_test(
 
     # t-test for intercept
     t_statistic = intercept / intercept_se
-    p_value = 2 * (1 - stats.t.cdf(abs(t_statistic), df))
+    p_value = 2 * stats.t.sf(abs(t_statistic), df)
 
     significant = p_value < alpha
 
