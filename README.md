@@ -7,8 +7,6 @@
 
 A **validated, comprehensive** Python platform for detecting and correcting publication bias in meta-analyses. Implements **5 state-of-the-art methods** with full validation against R packages, extensive simulation testing, and practical guidance.
 
-**Publication Status:** Revised for *Research Synthesis Methods* - All reviewer concerns addressed ✅
-
 ## 🎯 Key Features
 
 ### ✅ Validated Methods (Against R metafor)
